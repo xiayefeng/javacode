@@ -20,6 +20,7 @@ class VariableTest1
 		System.out.println("f1=" + f1);
 
 		// 测试浮点型精度
+		// BigDecimal
 		System.out.println(0.1+0.2);
 	}
 }
