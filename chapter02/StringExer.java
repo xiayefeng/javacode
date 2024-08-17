@@ -5,9 +5,9 @@
 class StringExer 
 {
 	public static void main(String[] args) {
-		String name = "Àî½ø";
+		String name = "æè¿›";
 		int age = 24;
-		char gender='ÄĞ';
+		char gender='ç”·';
 		double weight = 130.5;
 		boolean isMarried = false;
 		String phoneNumber = "13290002323";

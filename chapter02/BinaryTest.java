@@ -10,9 +10,12 @@ class BinaryTest
 
 	   int d = 0xad677;
 
+	   int f = 0xafdd;
+
 	   System.out.println(a1);
 	   System.out.println(b);
 	   System.out.println(c);
 	   System.out.println(d);
+	   System.out.println(f);
 	}
 }
