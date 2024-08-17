@@ -19,7 +19,7 @@ class VariableTest1
 
 		System.out.println("f1=" + f1);
 
-		// ²âÊÔ¸¡µãÐÍ¾«¶È
+		// æµ‹è¯•æµ®ç‚¹åž‹ç²¾åº¦
 		// BigDecimal
 		System.out.println(0.1+0.2);
 	}
