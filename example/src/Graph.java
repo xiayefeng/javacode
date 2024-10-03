@@ -47,7 +47,9 @@ public class Graph {
         }
         LinkedList<Integer> queue = new LinkedList<>();
         for (int i = 0; i < v; ++i) {
-            if (inDegree[i] == 0) queue.add(i);
+            if (inDegree[i] == 0) {
+                queue.add(i);
+            }
         }
         while (!queue.isEmpty()) {
             int i = queue.remove();
@@ -55,7 +57,9 @@ public class Graph {
             for (int j = 0; j < adj[i].size(); ++j) {
                 int k = adj[i].get(j);
                 inDegree[k]--;
-                if (inDegree[k] == 0) queue.add(k);
+                if (inDegree[k] == 0) {
+                    queue.add(k);
+                }
             }
         }
     }
@@ -85,7 +89,9 @@ public class Graph {
             int vertex, LinkedList<Integer> inverseAdj[], boolean[] visited) {
         for (int i = 0; i < inverseAdj[vertex].size(); ++i) {
             int w = inverseAdj[vertex].get(i);
-            if (visited[w] == true) continue;
+            if (visited[w] == true) {
+                continue;
+            }
             visited[w] = true;
             dfs(w, inverseAdj, visited);
         } // 先把vertex这个顶点可达的所有顶点都打印出来之后，再打印它自己
@@ -95,12 +101,14 @@ public class Graph {
     HashSet<Integer> hashTable = new HashSet<>(); // 保存已经访问过的actorId
     long findRootReferrerId(long actorId) {
         if (hashTable.contains(actorId)) { // 存在环
-            return;
+            return actorId;
         }
         hashTable.add(actorId);
         Long referrerId =
                 select referrer_id from [table] where actor_id = actorId;
-        if (referrerId == null) return actorId;
+        if (referrerId == null) {
+            return actorId;
+        }
         return findRootReferrerId(referrerId);
     }
 
