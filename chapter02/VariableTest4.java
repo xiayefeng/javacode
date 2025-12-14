@@ -1,16 +1,22 @@
-class VariableTest4{
-  public static void main(String[] args){
-    
-	char c1='a';
-	char c2='中';
-	char c3='★';
-	
-	
-	char c4='\u0043';
-	char c5='\u0036';
-	System.out.println(c4);
-	System.out.println(c5);
-	
-  }
+/*
+ ��������ǿ������ת��
 
+
+*/
+
+class VariableTest4 {
+	public static void main(String[] args) 
+	{
+
+		double d1= 12;
+        
+		int i1 = (int)d1;
+	
+	    System.out.println(i1);
+
+		long l1=123;
+
+		short s2 = (short)l1;
+        System.out.println(s2);
+	}
 }
